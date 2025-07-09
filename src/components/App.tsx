@@ -1,4 +1,5 @@
 // src/components/App.tsx
+
 import { useState } from 'react';
 
 import Product from './Product';
@@ -7,6 +8,8 @@ import UserMenu from './UserMenu';
 import Count from './Count';
 import Form from './Form/Form';
 import Modal from './Modal/Modal';
+import QueryTest from './QueryTest/QueryTest';
+import FormikForm from './FormikForm/FormikForm';
 
 export default function App() {
   const [usernames, setUsernames] = useState<string[]>([]);
@@ -25,6 +28,8 @@ export default function App() {
 
   return (
     <>
+      <FormikForm />
+      <QueryTest />
       <Form onSubmit={handleUser} />
       <ul>
         {usernames.map((username, index) => {
